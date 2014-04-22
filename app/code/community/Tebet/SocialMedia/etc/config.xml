@@ -51,4 +51,16 @@
             </adminhtml>
         </routers>
     </admin>
+    <crontab>
+        <jobs>
+            <share_count_update>
+                <schedule>
+                    <cron_expr>always</cron_expr>
+                </schedule>
+                <run>
+                    <model>socialmedia/observer::updateShareCount</model>
+                </run>
+            </share_count_update>
+        </jobs>
+    </crontab>
 </config>
