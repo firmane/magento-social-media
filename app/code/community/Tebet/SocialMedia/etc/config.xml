@@ -25,6 +25,20 @@
         </Tebet_SocialMedia>
     </modules>
     <global>
+        <models>
+            <socialmedia>
+                <class>Tebet_SocialMedia_Model</class>
+                <resourceModel>socialmedia_resource</resourceModel>
+            </socialmedia>
+            <socialmedia_resource>
+                <class>Tebet_SocialMedia_Model_Resource</class>
+                <entities>
+                    <share>
+                        <table>socialmedia_share</table>
+                    </share>
+                </entities>
+            </socialmedia_resource>
+        </models>
         <blocks>
             <socialmedia_adminhtml>
                 <class>Tebet_SocialMedia_Block_Adminhtml</class>
@@ -53,14 +67,14 @@
     </admin>
     <crontab>
         <jobs>
-            <share_count_update>
+            <count_update>
                 <schedule>
                     <cron_expr>always</cron_expr>
                 </schedule>
                 <run>
-                    <model>socialmedia/observer::updateShareCount</model>
+                    <model>socialmedia/observer::updateCount</model>
                 </run>
-            </share_count_update>
+            </count_update>
         </jobs>
     </crontab>
 </config>
