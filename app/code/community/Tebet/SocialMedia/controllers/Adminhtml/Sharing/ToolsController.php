@@ -20,18 +20,13 @@
 
 class Tebet_SocialMedia_Adminhtml_Sharing_ToolsController extends Mage_Adminhtml_Controller_Action
 {
-    protected function _initAction()
-    {
-        $this->loadLayout();
-        $this->_setActiveMenu('socialmedia/sharing_tools');
-    }
-
     public function indexAction()
     {
         $this->_title($this->__('SocialMedia'))
              ->_title($this->__('Sharing Tools'));
 
-        $this->_initAction();
+        $this->loadLayout();
+        $this->_setActiveMenu('socialmedia/sharing_tools');
         $this->renderLayout();
     }
 }

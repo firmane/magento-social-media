@@ -22,6 +22,6 @@ class Tebet_SocialMedia_Model_Resource_Share extends Mage_Core_Model_Resource_Db
 {
     protected function _construct()
     {
-        $this->_init('socialmedia/share', 'share_id');
+        $this->_init('socialmedia/share', 'url_id');
     }
 }

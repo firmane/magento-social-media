@@ -44,6 +44,13 @@
                 <class>Tebet_SocialMedia_Block_Adminhtml</class>
             </socialmedia_adminhtml>
         </blocks>
+        <resources>
+            <socialmedia_setup>
+                <setup>
+                    <module>Tebet_SocialMedia</module>
+                </setup>
+            </socialmedia_setup>
+        </resources>
     </global>
     <adminhtml>
         <layout>

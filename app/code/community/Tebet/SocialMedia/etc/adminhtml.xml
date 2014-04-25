@@ -26,8 +26,8 @@
             <children>
                 <sharing_tools>
                     <title>Sharing Tools</title>
-                    <sort_order>10</sort_order>
                     <action>adminhtml/sharing_tools</action>
+                    <sort_order>10</sort_order>
                 </sharing_tools>
             </children>
         </socialmedia>
