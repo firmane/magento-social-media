@@ -22,5 +22,7 @@ class Tebet_SocialMedia_Model_Resource_Share_Collection extends Mage_Core_Model_
 {
     public function addUpdateRequiredFilter()
     {
+        $this->addFieldToFilter('expired_at', array('lt' => Varien_Date::now()));
+        return $this;
     }
 }
