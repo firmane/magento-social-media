@@ -24,6 +24,18 @@ class Tebet_SocialMedia_Model_Vendor_Linkedin_Share_Count
 
     public function getUrlCount($url)
     {
+        $httpClient = new Tebet_SocialMedia_Model_Http_Client();
+        $response = $httpClient->setUri(self::API_RESOURCE_URL)
+                ->setParameterGet(array('url' => $url))
+                ->setConfig(array('timeout' => 5))
+                ->request('GET');
+
+        $count = 0;
+        if ($response) {
+            $result = json_decode($response->getBody(), true);
+            $count  = isset($result['count']) ? $result['count'] : $count;
+        }
+
         return $count;
     }
 }
